@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: ch02-handler-method-lecture-source
+server:
+  port: 8080
