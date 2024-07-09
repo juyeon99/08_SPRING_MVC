@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: ch01-request-mapping-lecture-source
+server:
+  port: 8080
