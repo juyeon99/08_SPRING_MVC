@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: ch03-viewresolver-lecture-source
+server:
+  port: 8080
