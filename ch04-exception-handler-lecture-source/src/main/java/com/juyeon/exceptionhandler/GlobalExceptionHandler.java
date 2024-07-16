@@ -17,12 +17,11 @@ public class GlobalExceptionHandler {
     public String userExceptionHandler(Model model, MemberRegisterException exception){
         System.out.println("Global 레벨의 exception 처리");
         model.addAttribute("exception", exception);
-
         return "error/memberRegister";
     }
 
     /*
-    * 최상위 타입인 Exception을 이용하면 구체적으로 작성하지 않은 타입의 에러가 발생해도]
+    * 최상위 타입인 Exception을 이용하면 구체적으로 작성하지 않은 타입의 에러가 발생해도
     * 처리가 가능하므로 default 처리 용도로 사용될 수 있다.
     * */
     @ExceptionHandler(Exception.class)
