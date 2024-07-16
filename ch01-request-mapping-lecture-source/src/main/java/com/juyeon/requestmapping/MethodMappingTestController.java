@@ -36,7 +36,7 @@ public class MethodMappingTestController {
         return "page/mappingResult";
     }
 
-    @RequestMapping(value = "/menu/modify", method = RequestMethod.POST) // POST로 요청시 white label error page
+    @RequestMapping(value = "/menu/modify", method = RequestMethod.POST) // GET으로 요청시 white label error page
     public String modifyAllMenu(Model model){
         model.addAttribute("message", "POST 방식의 메뉴 수정용 핸들러 메소드 호출");
         return "page/mappingResult";
