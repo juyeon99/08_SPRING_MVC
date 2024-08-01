@@ -1,0 +1,10 @@
+logging:
+  level:
+    root: info
+    com.juyeon.security: debug
+
+spring:
+  security:
+    user:
+      name: user
+      password: 1234    # ? ??? X
