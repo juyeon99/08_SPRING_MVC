@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{layout/default}">
+    <style layout:fragment="style">
+        * {font-size: 40px;}
+    </style>
+
+    <div layout:fragment="content">
+        <h1>안녕하세요 본문입니다.</h1>
+        💖😋😎🎀😘💕
+    </div>
+
+    <script layout:fragment="script">
+        console.log("💖😋😎🎀😘💕");
+    </script>
+</html>
