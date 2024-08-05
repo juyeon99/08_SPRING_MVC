@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+    <h1>기본 화면입니다.</h1>
+    <h1>🎀 Index 🎀</h1>
+
+    <div>
+        <a sec:authorize="isAnonymous()" th:href="@{/member/register}">Register</a>
+    </div>
+    <div>
+        <a sec:authorize="isAnonymous()" th:href="@{/auth/login}">Login</a>
+    </div>
+
+    <div sec:authorize="isAuthenticated()">
+        <a>[[| ${#authentication.principal.member.name} / ${#authentication.principal.username} |]]</a>
+    </div>
+
+    <div sec:authorize="isAuthenticated()">
+        <form th:action="@{/auth/logout}" method="post">
+            <button>Logout</button>
+        </form>
+    </div>
+
+    <div sec:authorize="isAuthenticated()">
+        <a th:href="@{/post/post}">Post</a>
+    </div>
+    <div sec:authorize="hasRole('ADMIN')">
+        <a th:href="@{/admin/admin}">Admin</a>
+    </div>
+</body>
+</html>
